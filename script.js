@@ -28,6 +28,19 @@ const collectEmployees = function() {
 
   return employees;
   
+}
+
+// Display the average salary
+const displayAverageSalary = function(employeesArray) {
+  let totalSalary = 0;
+
+  employeesArray.forEach(employee => {
+    totalSalary += employee.salary;
+  });
+
+  const averageSalary = totalSalary / employeesArray.length;
+  console.log(`Average Salary: $${averageSalary.toFixed(2)}`);
+}
 
 
 /*
